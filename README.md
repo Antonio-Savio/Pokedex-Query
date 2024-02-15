@@ -22,7 +22,7 @@ This application must be able to:
 - Show an inner page when the card is clicked.
 - This page contains Pokémon details, such as the image, name, type, moves list, abilities and its description.
 - Go back to the Home page when the logo is clicked.
-- Adapt layout through different screen sizes (responsivity).
+- Adapt layout through different screen sizes.
 
 ## Used Tools ⚙️
 - React JS: An open-source JavaScript library for building user interfaces (UI) for web applications, known for its efficiency and component-based development paradigm.
