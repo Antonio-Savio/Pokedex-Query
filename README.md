@@ -12,8 +12,9 @@ This project is a catalog of Pokémons, where you can filter by type, view detai
 ## Link 🔗
 - [Pokédex Query](https://pokedex-query.vercel.app/)
 
-## Functionalities
+## Functionalities ☑️
 This application must be able to:
+- Make API requests from https://pokeapi.co.
 - Show the 10 first Pokémons in a card format, with its name, id and type(s).
 - Load 10 more Pokémons on 'Load Pokémons' button click.
 - Hide the button when reach the 150° Pokémon.
@@ -42,7 +43,7 @@ Create a clone of the project.
 2. Navigate to the Project Directory:
 
 ```
-cd pokedex
+cd Pokedex-Query
 ```
 Will change the path to the directory where the React application is located.
 
