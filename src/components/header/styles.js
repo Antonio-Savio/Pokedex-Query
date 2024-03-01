@@ -9,14 +9,14 @@ const Heading = styled.header`
     background-color: ${({ theme }) => theme.background};
     color: ${({ theme }) => theme.color};
     transition: var(--transition-time);
+
+    @media (max-width: 420px) {
+        padding-top: 75px;
+    }
 `
 
 const Img = styled.img`
     width: 230px;
-
-    @media (max-width: 420px) {
-        margin-top: 60px;
-    }
 `
 
 export { Heading, Img }
