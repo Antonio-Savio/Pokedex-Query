@@ -12,6 +12,8 @@ const PokemonDetails = () => {
     const [details, setDetails] = useState({
         name: '',
         image: '',
+        height: '',
+        weight: '',
         moves: [],
         abilities: [],
         effect: [],
@@ -26,6 +28,8 @@ const PokemonDetails = () => {
             setDetails({
                 name: pokemon.name,
                 image: pokemon.sprites.other.home.front_default,
+                height: pokemon.height,
+                weight: pokemon.weight,
                 moves: pokemon.moves.slice(0, 15).map(item => item.move.name),
                 abilities: pokemon.abilities.map(item => item.ability.name),
                 effect: abilityDescription.map(desc => {
@@ -55,6 +59,12 @@ const PokemonDetails = () => {
                     </AsideWrap>
                     
                     <SideContainer>
+                        <H3>height</H3>
+                        <P>{details.height * 10} cm</P>
+
+                        <H3>weight</H3>
+                        <P>{details.weight / 10} kg</P>
+
                         <H3>type(s)</H3>
                         <TypesUl>
                             {details.types.map((type,id) => <TypeList className={type} key={id}>{type}</TypeList>)}
