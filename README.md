@@ -1,5 +1,5 @@
 # Pokédex Query
-This project is a catalog of Pokémons, where you can filter by type, view detailed info as abilities and moves. You can also toggle the page into dark/light mode.
+This project is a catalog of Pokémons, where you can filter by type, view detailed info as abilities and moves, and you can also toggle the page into dark/light mode.
 
 ## Desktop Overview 🖳
 
@@ -10,7 +10,20 @@ This project is a catalog of Pokémons, where you can filter by type, view detai
 <img src="src/assets/mobile-version.gif" alt="pokedex mobile overview">
 
 ## Link 🔗
-- [Pokédex Query]()
+- [Pokédex Query](https://pokedex-query.vercel.app/)
+
+## Functionalities ☑️
+This application must be able to:
+- Make API requests from https://pokeapi.co.
+- Show the 10 first Pokémons in a card format, with its name, id and type(s).
+- Load 10 more Pokémons on 'Load Pokémons' button click.
+- Hide the button when reach the 150° Pokémon.
+- Filter by type.
+- Switch between dark and light mode.
+- Show an inner page when the card is clicked.
+- This page contains Pokémon details, such as the image, name, type, moves list, abilities and its description.
+- Go back to the Home page when the logo is clicked.
+- Adapt layout through different screen sizes.
 
 ## Used Tools ⚙️
 - React JS: An open-source JavaScript library for building user interfaces (UI) for web applications, known for its efficiency and component-based development paradigm.
@@ -23,14 +36,14 @@ This project is a catalog of Pokémons, where you can filter by type, view detai
 1. Clone the Repository:
 
 ```
-git clone <repository_url>
+git clone https://github.com/Antonio-Savio/Pokedex-Query.git
 ```
 Create a clone of the project.
 
 2. Navigate to the Project Directory:
 
 ```
-cd pokedex
+cd Pokedex-Query
 ```
 Will change the path to the directory where the React application is located.
 
