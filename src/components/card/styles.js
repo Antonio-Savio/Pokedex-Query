@@ -34,7 +34,7 @@ const Li = styled.li`
     }
 
     &.darkMode {
-        background-color: var(--darkless-color);
+        background-color: ${({theme}) => theme.darklessColor};
         color: var(--lighter-color);
     }
 `
