@@ -1,14 +1,17 @@
-import React, { useContext, useState } from "react"
-import { themes, ThemeContext } from "../../contexts/theme-context"
+import React, { useContext } from "react"
+import { themes, ThemeContext, ModeContext } from "../../contexts/theme-context"
 import { Button, MoonIcon, Span, SunIcon } from "./styles"
 
 const ThemeSwitchButton = () => {
     const { theme, setTheme } = useContext(ThemeContext)
-    const [isDarkMode, setDarkMode] = useState(false)
+    const { isDarkMode, setDarkMode } = useContext(ModeContext)
 
     const toggleButton = () => {
-        setTheme(theme === themes.light ? themes.dark : themes.light)
+        setTheme(isDarkMode ? themes.light : themes.dark)
         setDarkMode(!isDarkMode)
+        
+        localStorage.setItem('theme', isDarkMode ? JSON.stringify(themes.light) : JSON.stringify(themes.dark))
+        localStorage.setItem('mode', !isDarkMode)
     }
 
     return (

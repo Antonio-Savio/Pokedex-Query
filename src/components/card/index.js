@@ -1,5 +1,5 @@
 import { useContext, useEffect, useState } from 'react'
-import { ThemeContext, themes } from '../../contexts/theme-context'
+import { ThemeContext, ModeContext } from '../../contexts/theme-context'
 import { Img, Main, Li, Ul, Info, Number, Name, Types, Type } from './styles'
 import { Button } from '../load-button'
 import { getPokemon } from '../../services/get-pokemons'
@@ -8,6 +8,7 @@ import { Link } from 'react-router-dom'
 
 const Card = () => {
     const { theme } = useContext(ThemeContext)
+    const { isDarkMode } = useContext(ModeContext)
 
     const [list, setList] = useState({
         name: '',
@@ -47,7 +48,7 @@ const Card = () => {
 
                         return (
                             <Link to={`/details/${pokemon.id}`} key={id}>
-                                <Li className={theme === themes.dark ? "darkMode" : ""}>
+                                <Li theme={theme} className={isDarkMode ? "darkMode" : ""}>
                                     <Info>
                                         <Number>#00{pokemon.id}</Number>
                                         <Name>{pokemon.name}</Name>

@@ -1,14 +1,15 @@
 import { getDetails } from "../../services/get-details"
 import { useParams } from "react-router-dom";
 import { useState, useEffect, useContext } from "react";
-import { ThemeContext, themes } from '../../contexts/theme-context'
+import { ModeContext, ThemeContext } from '../../contexts/theme-context'
 import { getAbililityEffect } from "../../services/get-ability";
 import { Principal, Container, Img, TypeList, TypesUl, H1, H3, H4, P, SideContainer, Span, AsideWrap } from "./styles";
 
 const PokemonDetails = () => {
     const { id } = useParams()
+    const { isDarkMode } = useContext(ModeContext)
     const { theme } = useContext(ThemeContext)
-
+    
     const [details, setDetails] = useState({
         name: '',
         image: '',
@@ -52,7 +53,7 @@ const PokemonDetails = () => {
     return (
         <>
             <Principal theme={theme}>
-                <Container className={theme === themes.dark ? "darkMode" : ""}>
+                <Container className={isDarkMode ? "darkMode" : ""}>
                     <AsideWrap>
                         <H1>{details.name}</H1>
                         <Img src={details.image} alt={details.name} />

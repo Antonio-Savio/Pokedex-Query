@@ -1,11 +1,11 @@
 import { useEffect, useState, useContext } from "react";
 import { getTypes } from "../../services/get-types";
 import { Select, P } from "./styles";
-import { ThemeContext, themes } from "../../contexts/theme-context"
+import { ModeContext } from "../../contexts/theme-context"
 import { getPokemon } from "../../services/get-pokemons";
 
 const FilterType = ({ list, setList, sendFilterParameter, loadIncrement, message, setMessage }) => {
-    const { theme } = useContext(ThemeContext)
+    const { isDarkMode } = useContext(ModeContext)
     const [types, setTypes] = useState([])
 
     useEffect(() => {
@@ -41,8 +41,8 @@ const FilterType = ({ list, setList, sendFilterParameter, loadIncrement, message
 
     return (
         <>
-            <Select 
-            className={theme === themes.dark ? "darkMode" : ""}
+            <Select
+            className={isDarkMode ? "darkMode" : ""}
             onChange={(e) => pokemonTypeFilter(e.target.value)}>
                 <option value="">All types</option>
                 {
